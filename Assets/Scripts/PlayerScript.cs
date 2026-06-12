@@ -7,6 +7,8 @@ using System.Collections;
 
 public class PlayerScript : MonoBehaviour
 {
+	[SerializeField] AudioClip RockSE;
+	AudioSource aud;
 	float speed = 20f;
 	float tiltAngle = 45f;
 	float tiltSpeed = 5f;
@@ -16,6 +18,7 @@ public class PlayerScript : MonoBehaviour
 	private void Start()
 	{
 		rbody = GetComponent<Rigidbody>();
+		aud = GetComponent<AudioSource>();
 	}
 
 	private void FixedUpdate()
@@ -60,6 +63,7 @@ public class PlayerScript : MonoBehaviour
 	{
 		if (collision.gameObject.CompareTag("Rock") && !hit)
 		{
+			aud.PlayOneShot(RockSE);
 			hit = true;
 			StartCoroutine(GameOverCoroutine());
 		}

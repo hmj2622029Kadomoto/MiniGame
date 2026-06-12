@@ -9,7 +9,7 @@ public class MissileGenerator : MonoBehaviour
 
 	private void Update()
 	{
-		if(Mouse.current.leftButton.isPressed)
+		if(Mouse.current.leftButton.wasPressedThisFrame)
 		{
 			GameObject missile = Instantiate(missilePrefab,player.position,player.rotation);
 			missile.GetComponent<MissileScript>().Shoot(player.forward * missileSpeed);

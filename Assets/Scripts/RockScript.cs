@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class RockScript : MonoBehaviour
 {
-
+	[SerializeField] AudioClip RockSE;
+	AudioSource aud;
 	public void RockComing(Vector3 dir)
 	{
 		GetComponent<Rigidbody>().AddForce(dir);
@@ -12,6 +13,7 @@ public class RockScript : MonoBehaviour
 	private void Start()
 	{
 		RockComing(new Vector3(Random.Range(5000,-5001), Random.Range(5000,-5001), Random.Range(-10000,-50001)));
+		aud = GetComponent<AudioSource>();
 	}
 
 	private void Update()
@@ -29,6 +31,7 @@ public class RockScript : MonoBehaviour
 		else
 		{
 			GetComponent<ParticleSystem>().Play();
+			aud.PlayOneShot(RockSE);
 			GetComponent<Renderer>().enabled = false;
 			GetComponent<Collider>().enabled = false;
 		}
