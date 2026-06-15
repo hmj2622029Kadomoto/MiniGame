@@ -881,7 +881,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< HEAD
+<<<<<<< HEAD
+  m_text: Game Clear!!
+=======
   m_text: Game Clear !!
+>>>>>>> parent of b713325 (SEの追加、フォントの変更、隕石の処理変更、ミサイルの処理変更)
+=======
+  m_text: Game Clear !!
+>>>>>>> parent of b713325 (SEの追加、フォントの変更、隕石の処理変更、ミサイルの処理変更)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
