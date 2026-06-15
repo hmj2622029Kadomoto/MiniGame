@@ -8,6 +8,8 @@ using System.Collections;
 public class PlayerScript : MonoBehaviour
 {
 	[SerializeField] AudioClip RockSE;
+	[SerializeField] AudioClip CrashSE;
+	[SerializeField] AudioClip EmergencySE;
 	AudioSource aud;
 	float speed = 20f;
 	float tiltAngle = 45f;
@@ -61,11 +63,16 @@ public class PlayerScript : MonoBehaviour
 	}
 	private void OnCollisionEnter(Collision collision)
 	{
-		if (collision.gameObject.CompareTag("Rock") && !hit)
+		if (collision.gameObject.CompareTag("Rock"))
 		{
 			aud.PlayOneShot(RockSE);
-			hit = true;
-			StartCoroutine(GameOverCoroutine());
+			aud.PlayOneShot(CrashSE);
+			if (!hit)
+			{
+				aud.PlayOneShot(EmergencySE);
+				hit = true;
+				StartCoroutine(GameOverCoroutine());
+			}
 		}
 	}
 	IEnumerator GameOverCoroutine()

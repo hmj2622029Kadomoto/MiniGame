@@ -16,7 +16,6 @@ public class MissileScript : MonoBehaviour
 			GetComponent<ParticleSystem>().Play();
 			GetComponent<Renderer>().enabled = false;
 			GetComponent<Collider>().enabled = false;
-			//Destroy(collision.gameObject);
 		}
 	}
 	private void Update()
