@@ -16,7 +16,7 @@ public class PlayerScript : MonoBehaviour
 	float tiltAngle = 45f;
 	float tiltSpeed = 5f;
 	float invincibleTime = 2.0f;
-	float rotateSpeed = 720.0f;
+	float rotateSpeed = 1080.0f;
 	Rigidbody rbody;
 	bool hit = false;
 	bool isInvincible = false;

@@ -8,6 +8,7 @@ public class RockGenerate : MonoBehaviour
 	Rigidbody rbody;
 	float time = 0f;
 	float speed = 20f;
+	bool earth = true;
 
 	private void Start()
 	{
@@ -22,9 +23,10 @@ public class RockGenerate : MonoBehaviour
 			GameObject rock = Instantiate(RockPrefab, transform.position,Quaternion.identity);
 		}
 
-		if (time >= 30f && time <= 30.1f)
+		if (time >= 30f && earth)
 		{
 			GameObject Earth = Instantiate(EarthPrefab, transform.position, Quaternion.identity);
+			earth = false;
 		}
 	}
 
