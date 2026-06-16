@@ -90,6 +90,7 @@ public class PlayerScript : MonoBehaviour
 			}
 		}
 	}
+
 	IEnumerator GameOverCoroutine()
 	{
 		yield return new WaitForSeconds(3f);
