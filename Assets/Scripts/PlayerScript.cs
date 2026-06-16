@@ -10,6 +10,7 @@ public class PlayerScript : MonoBehaviour
 	[SerializeField] AudioClip RockSE;
 	[SerializeField] AudioClip CrashSE;
 	[SerializeField] AudioClip EmergencySE;
+	[SerializeField] AudioClip RowlingSE;
 	[SerializeField] GameObject RowlingPrefab;
 	AudioSource aud;
 	float speed = 20f;
@@ -99,7 +100,7 @@ public class PlayerScript : MonoBehaviour
 	{
 		isInvincible = true;
 		isRotating = true;
-
+		aud.PlayOneShot(RowlingSE);
 		float distance = 40.0f;
 
 		Vector3 spawnPos = transform.position + transform.forward * distance;
