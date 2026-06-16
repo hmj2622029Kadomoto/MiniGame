@@ -10,7 +10,7 @@ public class EarthScript : MonoBehaviour
 
 	private void Start()
 	{
-		EarthComing(new Vector3(0,0,-10000));
+		EarthComing(new Vector3(0,0,-5000));
 	}
 
 	private void OnTriggerEnter(Collider other)

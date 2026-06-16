@@ -7,7 +7,6 @@ using System.Collections;
 
 public class PlayerScript : MonoBehaviour
 {
-	[SerializeField] AudioClip RockSE;
 	[SerializeField] AudioClip CrashSE;
 	[SerializeField] AudioClip EmergencySE;
 	[SerializeField] AudioClip RowlingSE;
@@ -80,7 +79,6 @@ public class PlayerScript : MonoBehaviour
 	{
 		if (collision.gameObject.CompareTag("Rock"))
 		{
-			aud.PlayOneShot(RockSE);
 			aud.PlayOneShot(CrashSE);
 			if (!hit)
 			{
