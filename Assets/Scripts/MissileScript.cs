@@ -13,11 +13,10 @@ public class MissileScript : MonoBehaviour
 	{
 		if (collision.gameObject.CompareTag("Rock"))
 		{
-			GetComponent<ParticleSystem>().Play();
-			GetComponent<Renderer>().enabled = false;
-			GetComponent<Collider>().enabled = false;
+			Destroy(gameObject);
 		}
 	}
+
 	private void Update()
 	{
 		if (transform.position.z > 2000.0f)

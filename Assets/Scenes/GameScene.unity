@@ -791,6 +791,7 @@ MonoBehaviour:
   RockSE: {fileID: 8300000, guid: 543261977cc43504787901b9475a802e, type: 3}
   CrashSE: {fileID: 8300000, guid: 7c705e96383a9cb428bdc5878f7ea286, type: 3}
   EmergencySE: {fileID: 8300000, guid: 29972ebc7f4ae9a439bc916e1de6f72e, type: 3}
+  RowlingPrefab: {fileID: 7930713211713868111, guid: d7624ff86552c7c4491c8eec6352c0aa, type: 3}
 --- !u!54 &540541888
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -810,7 +811,7 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 192
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
@@ -848,7 +849,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 543261977cc43504787901b9475a802e, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1042,7 +1043,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 29972ebc7f4ae9a439bc916e1de6f72e, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1139,7 +1140,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 7c705e96383a9cb428bdc5878f7ea286, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1335,7 +1336,7 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 192
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -1356,7 +1357,7 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 192
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0

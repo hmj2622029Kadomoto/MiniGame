@@ -12,13 +12,13 @@ public class RockScript : MonoBehaviour
 
 	private void Start()
 	{
-		RockComing(new Vector3(Random.Range(5000,-5001), Random.Range(5000,-5001), Random.Range(-10000,-50001)));
+		RockComing(new Vector3(Random.Range(5000,-5001), Random.Range(5000,-5001), Random.Range(-10000,-25001)));
 		aud = GetComponent<AudioSource>();
 	}
 
 	private void Update()
 	{
-		if (transform.position.z < -10.0f)
+		if (transform.position.z < -100.0f)
 		{
 			Destroy(gameObject);
 		}

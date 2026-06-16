@@ -12,6 +12,7 @@ public class EarthScript : MonoBehaviour
 	{
 		EarthComing(new Vector3(0,0,-10000));
 	}
+
 	private void OnTriggerEnter(Collider other)
 	{
 		if (other.gameObject.CompareTag("Sparrow"))

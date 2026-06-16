@@ -10,12 +10,17 @@ public class PlayerScript : MonoBehaviour
 	[SerializeField] AudioClip RockSE;
 	[SerializeField] AudioClip CrashSE;
 	[SerializeField] AudioClip EmergencySE;
+	[SerializeField] GameObject RowlingPrefab;
 	AudioSource aud;
 	float speed = 20f;
 	float tiltAngle = 45f;
 	float tiltSpeed = 5f;
+	float invincibleTime = 2.0f;
+	float rotateSpeed = 720.0f;
 	Rigidbody rbody;
 	bool hit = false;
+	bool isInvincible = false;
+	bool isRotating = false;
 
 	private void Start()
 	{
@@ -56,6 +61,15 @@ public class PlayerScript : MonoBehaviour
 			Quaternion targetRotation = Quaternion.Euler(targetX,0,0);
 			transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, tiltSpeed * Time.deltaTime);
 		}
+		if (Mouse.current.rightButton.wasPressedThisFrame && !isInvincible)
+		{
+			StartCoroutine(InvincibleMode());
+		}
+		if (isRotating)
+		{
+			transform.Rotate(0, 0, rotateSpeed * Time.deltaTime);
+		}
+
 
 		Vector3 Move = new(moveX, moveY, 0);
 
@@ -79,5 +93,28 @@ public class PlayerScript : MonoBehaviour
 	{
 		yield return new WaitForSeconds(3f);
 		SceneManager.LoadScene("GameOverScene");
+	}
+
+	IEnumerator InvincibleMode()
+	{
+		isInvincible = true;
+		isRotating = true;
+
+		float distance = 40.0f;
+
+		Vector3 spawnPos = transform.position + transform.forward * distance;
+
+		GameObject Rowling = Instantiate(
+			RowlingPrefab,
+			spawnPos,
+			transform.rotation
+		);
+
+		yield return new WaitForSeconds(invincibleTime);
+
+		isInvincible = false;
+		isRotating = false;
+
+		Destroy(Rowling);
 	}
 }
