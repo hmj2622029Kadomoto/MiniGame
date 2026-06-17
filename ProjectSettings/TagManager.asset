@@ -8,6 +8,7 @@ TagManager:
   - Missile
   - Rock
   - Rowling
+  - Earth
   layers:
   - Default
   - TransparentFX

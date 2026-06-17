@@ -15,6 +15,10 @@ public class MissileScript : MonoBehaviour
 		{
 			Destroy(gameObject);
 		}
+		if (collision.gameObject.CompareTag("Earth"))
+		{
+			Destroy(gameObject);
+		}
 	}
 
 	private void Update()

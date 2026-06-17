@@ -791,7 +791,7 @@ MonoBehaviour:
   CrashSE: {fileID: 8300000, guid: 7c705e96383a9cb428bdc5878f7ea286, type: 3}
   EmergencySE: {fileID: 8300000, guid: 29972ebc7f4ae9a439bc916e1de6f72e, type: 3}
   RowlingSE: {fileID: 8300000, guid: 47398157107480e4e8d035772ac015f6, type: 3}
-  RowlingPrefab: {fileID: 7930713211713868111, guid: d7624ff86552c7c4491c8eec6352c0aa, type: 3}
+  RowlingPrefab: {fileID: 2377527524687028048, guid: 9f81ce5d4da61444cbf3b4d062c318aa, type: 3}
 --- !u!54 &540541888
 Rigidbody:
   m_ObjectHideFlags: 0
